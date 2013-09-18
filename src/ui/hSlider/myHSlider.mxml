@@ -6,38 +6,27 @@
 		<![CDATA[
 			import mx.events.FlexEvent;
 			
-			var pcnt:Number = 100;
-			
-			protected function percent_creationCompleteHandler(event:FlexEvent):void
-			{
-				percent.text = pcnt+"%";
-				slider.value = pcnt;
-			}
-			
 			protected function minus_clickHandler(event:MouseEvent):void
 			{
-				if (pcnt>10) { 
-					if(pcnt%10 == 0){
-						pcnt = pcnt-10;
+				if (slider.value>10) { 
+					if(slider.value%10 == 0){
+						slider.value = slider.value-10;
 					} else {
-						pcnt = pcnt-pcnt%10;	
+						slider.value = slider.value-slider.value%10;	
 					}
-					slider.value = pcnt;
-					percent.text = pcnt+"%";}
+				}
 			}
 			
 			protected function button1_clickHandler(event:MouseEvent):void
 			{
-				if (pcnt<200) {
-					pcnt = pcnt+10-pcnt%10;
-					slider.value = pcnt;
-					percent.text = pcnt+"%";}
+				if (slider.value<200) {
+					slider.value = slider.value+10-slider.value%10;
+				}
 			}
 			
-			protected function slider_changeHandler(value:Number):void
+			protected function slider_creationCompleteHandler(event:FlexEvent):void
 			{
-				pcnt = value;
-				percent.text = pcnt+"%";				
+				slider.value = 100;
 			}
 			
 		]]>
@@ -45,12 +34,13 @@
 	<fx:Declarations>
 		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
 	</fx:Declarations>
-	<s:HSlider id="slider" minimum="10" maximum="200" change="slider_changeHandler(slider.value);" x="55" y="7" skinClass="ui.hSlider.hSliderSkin"/>
+	<s:HSlider id="slider" minimum="10" maximum="200" x="55" y="7" 
+			   skinClass="ui.hSlider.hSliderSkin" creationComplete="slider_creationCompleteHandler(event)"/>
 	<s:Button id="minus" x="38" y="0" width="16" height="16" label="Уменьшить масштаб"
 			  icon="@Embed('assets/icon_minus.png')" skinClass="ui.hSlider.hSliderButtonSkin" click="minus_clickHandler(event)"/>
 	<s:Button x="154" y="1" width="16" height="16" label="Увеличить масштаб"
 			  icon="@Embed('assets/icon_plus.png')" skinClass="ui.hSlider.hSliderButtonSkin" click="button1_clickHandler(event)"/>
-	<s:Label id="percent" width="30" height="16" fontSize="11" paddingBottom="4" paddingTop="4"
-			 textAlign="center" verticalAlign="middle" creationComplete="percent_creationCompleteHandler(event)"/>
+	<s:Label id="percent" width="30" height="16" fontSize="11" paddingBottom="4" paddingTop="4"  text="{slider.value}%"
+			 textAlign="center" verticalAlign="middle"/>
 	
 </s:Group>
