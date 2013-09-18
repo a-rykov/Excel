@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	<fx:Declarations>
+		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
+	</fx:Declarations>
+	<s:ButtonBar skinClass="ui.buttonBar.ButtonBarSkin">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:Object label="Выровнять текст по левому краю" icon="@Embed('assets/icon_align_left.png')"/>
+				<fx:Object label="Выровнять текст по центру" icon="@Embed('assets/icon_align_center.png')"/>
+				<fx:Object label="Выровнять текст по правому краю" icon="@Embed('assets/icon_align_right.png')"/>
+			</s:ArrayList>
+		</s:dataProvider>
+	</s:ButtonBar>
+</s:Group>
