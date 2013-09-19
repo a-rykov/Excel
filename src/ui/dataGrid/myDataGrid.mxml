@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:DataGrid xmlns:fx="http://ns.adobe.com/mxml/2009" 
 			xmlns:s="library://ns.adobe.com/flex/spark" 
-			xmlns:mx="library://ns.adobe.com/flex/mx" width="420" height="134">
+			xmlns:mx="library://ns.adobe.com/flex/mx" width="420" height="134"
+			skinClass="ui.dataGrid.DataGridSkin">
 	<fx:Declarations>
 		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
 	</fx:Declarations>
@@ -16,7 +17,7 @@
 	</s:columns>
 	<s:dataProvider>
 		<s:ArrayList>
-			<fx:Object dataField1="sdf" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
 			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
 			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
 			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>

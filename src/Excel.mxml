@@ -14,5 +14,6 @@
 	<buttonBar:myButtonBar  x="320" y="79"/>
 	<hSlider:myHSlider x="1131" y="682"/>
 	<comboBox:myComboBox x="483" y="52"/>
+	<dataGrid:myDataGrid x="20" y="145" width="320" height="220"/>
 	
 </s:Application>
