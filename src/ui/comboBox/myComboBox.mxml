@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			[Embed('assets/icon_ob.png')]
+			public var ob:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_num.png')]
+			public var num:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_fin.png')]
+			public var fin:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_mon.png')]
+			public var mon:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_time.png')]
+			public var time:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_sdate.png')]
+			public var sdate:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_ldate.png')]
+			public var ldate:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_proc.png')]
+			public var proc:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_frac.png')]
+			public var frac:Class;
+			
+			[Bindable]
+			[Embed('assets/icon_ecsp.png')]
+			public var ecsp:Class;
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
+	</fx:Declarations>
+	
+	<s:ComboBox id="cb" prompt="Общий" labelField="label" skinClass="ui.comboBox.ComboBoxSkin">
+		<s:dataProvider>
+			<s:ArrayList>
+				<fx:Object label="Общий" icon="{ob}"/>
+				<fx:Object label="Числовой" icon="{num}"/>
+				<fx:Object label="Денежный" icon="{mon}"/>
+				<fx:Object label="Финансовый" icon="{fin}"/>
+				<fx:Object label="Краткий формат даты" icon="{sdate}"/>
+				<fx:Object label="Длинный формат даты" icon="{ldate}"/>
+				<fx:Object label="Время" icon="{time}"/>
+				<fx:Object label="Процентный" icon="{proc}"/>
+				<fx:Object label="Дробный" icon="{frac}"/>
+				<fx:Object label="Экспоненциальный" icon="{ecsp}"/>
+			</s:ArrayList>
+		</s:dataProvider>
+	</s:ComboBox>	
+</s:Group>

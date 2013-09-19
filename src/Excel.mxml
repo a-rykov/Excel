@@ -4,14 +4,15 @@
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   xmlns:buttonBar="ui.buttonBar.*"
 			   xmlns:hSlider="ui.hSlider.*"
-			   minWidth="955" minHeight="600">
+			   minWidth="955" minHeight="600" xmlns:comboBox="ui.comboBox.*" xmlns:dataGrid="ui.dataGrid.*">
+	<fx:Style source="Excel.css"/>
 	<fx:Declarations>
 		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
 	</fx:Declarations>
 	
 	<s:BitmapImage source="@Embed('assets/background.png')" width="100%" height="100%"/> 
 	<buttonBar:myButtonBar  x="320" y="79"/>
-	<hSlider:myHSlider x="1131" y="682">
-	</hSlider:myHSlider>
+	<hSlider:myHSlider x="1131" y="682"/>
+	<comboBox:myComboBox x="483" y="52"/>
 	
 </s:Application>

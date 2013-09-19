@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:DataGrid xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			xmlns:s="library://ns.adobe.com/flex/spark" 
+			xmlns:mx="library://ns.adobe.com/flex/mx" width="420" height="134">
+	<fx:Declarations>
+		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
+	</fx:Declarations>
+	<s:columns>
+		<s:ArrayList>
+			<s:GridColumn dataField="dataField1" headerText="A"></s:GridColumn>
+			<s:GridColumn dataField="dataField2" headerText="B"></s:GridColumn>
+			<s:GridColumn dataField="dataField3" headerText="C"></s:GridColumn>
+			<s:GridColumn dataField="dataField4" headerText="D"></s:GridColumn>
+			<s:GridColumn dataField="dataField5" headerText="E"></s:GridColumn>
+		</s:ArrayList>
+	</s:columns>
+	<s:dataProvider>
+		<s:ArrayList>
+			<fx:Object dataField1="sdf" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+			<fx:Object dataField1="" dataField2="" dataField3="" dataField4="" dataField5=""/>
+		</s:ArrayList>
+	</s:dataProvider>
+</s:DataGrid>
