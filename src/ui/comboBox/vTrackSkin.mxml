@@ -11,39 +11,42 @@
 
 -->
 
-<!--- The default skin class for the Spark Button component.  
+<!--- The default skin class for the track of a Spark VScrollBar component.  
 
-       @see spark.components.Button
+       @see spark.components.VScrollBar
         
       @langversion 3.0
       @playerversion Flash 10
       @playerversion AIR 1.5
       @productversion Flex 4
 -->
-<s:SparkButtonSkin xmlns:fx="http://ns.adobe.com/mxml/2009" 
-             xmlns:s="library://ns.adobe.com/flex/spark" 
-             xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
-             alpha.disabled="0.5">
-     
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:fb="http://ns.adobe.com/flashbuilder/2009">
+
     <fx:Metadata>
-        <![CDATA[ 
+    <![CDATA[ 
         /** 
          * @copy spark.skins.spark.ApplicationSkin#hostComponent
          */
         [HostComponent("spark.components.Button")]
-        ]]>
-    </fx:Metadata>
+    ]]>
+    </fx:Metadata> 
     
-    <!-- states -->
     <s:states>
-		<s:State name="up" />
-        <s:State name="over" />
+        <s:State name="up" />
         <s:State name="down" />
+        <s:State name="over" />
         <s:State name="disabled" />
     </s:states>
-    
-	<s:BitmapImage width="13" height="22" source="@Embed('assets/icon_fill2.png')" fillMode="repeat" includeIn="over"/>
-	
-	<s:BitmapImage width="100%" height="100%" source="@Embed('assets/icon_cbbutton.png')"/>
-    
-</s:SparkButtonSkin>
+
+    <!-- border/fill -->
+    <s:Rect top="0" bottom="0" left="0" right="0">
+        <s:stroke>
+            <s:SolidColorStroke color="0xEBEDEF" weight="1"/>
+        </s:stroke>
+        <s:fill>
+            <s:SolidColor color="0xFFFFFF" />
+        </s:fill>
+    </s:Rect>
+
+</s:SparkSkin>

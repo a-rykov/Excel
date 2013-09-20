@@ -55,7 +55,7 @@
 		<!-- Разместить невизуальные элементы (например, службы или объекты значений) -->
 	</fx:Declarations>
 	
-	<s:ComboBox id="cb" prompt="Общий" labelField="label" skinClass="ui.comboBox.ComboBoxSkin">
+	<s:ComboBox id="cb" prompt="Общий" labelField="label" skinClass="ui.comboBox.ComboBoxSkin" focusAlpha="0">
 		<s:dataProvider>
 			<s:ArrayList>
 				<fx:Object label="Общий" icon="{ob}"/>
